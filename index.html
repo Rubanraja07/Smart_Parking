@@ -3,36 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vellore Institute of Technology</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Smart Parking System</title>
     <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-
-   free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
-    <section class="header">
-        <nav>
-            <a href="index.html"><img src="images/Logo.png"</a>
-            <div class="nav-link">
-                <i class="fa fa-times" aria-hidden="true"></i>
-             
+    <div class="login-container" id="login-page">
+        <h2>Login to Smart Parking System</h2>
+        <form id="login-form">
+            <label for="user-id">User ID</label>
+            <input type="text" id="user-id" name="user-id" placeholder="Enter a user id" required>
 
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password@" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁</span>
             </div>
-            <i class="fa fa-bars"></i>
 
+            <button type="submit">Login</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="#">Sign up here</a></p>
+    </div>
 
-        </nav>
-        <div class="text-box">
-            <h1>Welcome to Our VIT University</h1>
-            <p>Vellore Institute of Technology was founded in 1984 as Vellore Engineering College by the Chancellor Dr. G. Viswanathan. From its humble beginning, the institution has grown exponentially to that of having more than 33,000 students.</p>
-        <a href="" class="visit-btn">Visti us to know more</a>
-        </div>
+    <div id="main-site" style="display: none;">
+        <header>
+            <div class="logo">
+                <h1>Smart Parking System</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    </section>
+        <section class="hero">
+            <h2>Find and Reserve Parking Spaces Easily</h2>
+            <p>Optimized parking solutions at your fingertips.</p>
+            <button class="cta">Get Started</button>
+           
+            <section id="features">
+                <h2>Core Features</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Real-Time Tracking</h3>
+                        <p>Get real-time updates on available parking spaces in your area.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Automated Payment</h3>
+                        <p>Pay for parking quickly and securely using digital payment methods.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Reservation System</h3>
+                        <p>Reserve your parking spot in advance with just a few clicks.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>License Plate Recognition</h3>
+                        <p>Seamlessly enter and exit parking lots using our advanced LPR system.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="pricing">
+                <h2>Pricing Plans</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-option">
+                        <h3>Basic Plan</h3>
+                        <p>$5/day</p>
+                        <p>Access to parking spaces with real-time tracking.</p>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Pro Plan</h3>
+                        <p>$10/day</p>
+                        <p>All features of the Basic Plan plus reservations and priority spots.</p>
+                    </div>
+                    <div class="pricing-option">
+                        <h3>Premium Plan</h3>
+                        <p>$15/day</p>
+                        <p>All features plus access to EV charging stations and priority assistance.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+        
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Smart Parking System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
